@@ -1,0 +1,126 @@
+/* When the screen is less than 840px pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 840px) {
+  .topnav a {display: none;} /* .topnav a:not(:first-child) {display: none;} */
+  .topnav a.icon {
+    float: right;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (displays the links vertically instead of horizontally) */
+@media screen and (max-width: 840px) {
+  topnav,.topnav.responsive {
+    position: relative;
+    background-color: #1D1F2B;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1em;
+    color: #ffffff;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    color: #ffffff;
+  }
+}
+@media screen and (max-width: 900px) {
+	h2.intro {
+	top: 50%;
+  }
+}
+ /*------------------------------------
+SECTIONS
+------------------------------------*/
+@media screen and (max-width: 840px) {
+
+#about{
+	width: 90%;
+	margin: 0 auto;
+	padding: 0 5%;
+}
+#people{
+	width: 90%;
+	margin: 0 auto;
+	padding: 0 5%;
+}
+#partners{
+	width: 90%;
+	margin: 0 auto;
+	padding: 0 5%;
+}
+#gallery{
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 5%;
+}
+#links{
+	width: 90%;
+	margin: 0 auto;
+	padding: 0 5%;
+}
+#contact{
+	width: 90%;
+	margin: 0 auto;
+	padding: 0 5%;
+}
+#footer{
+	width: 90%;
+	margin: 0 auto;
+	padding: 5%;
+}
+}
+
+/*--------------------
+GALLERY
+--------------------*/
+/* Makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+/* Make the title logo fit small screens in the right place*/
+  img.title{
+	top: 20%;
+	width: 50%;
+	left: 25%;
+  }
+}
+/* Make the title logo fit big screens in the right place*/
+@media screen and (min-width: 1800px){
+	img.title{
+	top: 5%;
+	width: 30%;
+	left: 35%;
+  }
+}
+
+/* Removes padding on "People" and "Partners" sections to stop captions taking up too much of the image */
+@media screen and (max-width: 1500px) {
+	#people {
+	padding: 0;
+  }
+  #partners {
+	  padding: 0;
+  }
+}
+/* Make info tile flyouts full-width at small screen sizes */
+@media screen and (max-width: 1200px) {
+	.overlay .info-tile-content {
+  width: 100%;
+	}
+}
