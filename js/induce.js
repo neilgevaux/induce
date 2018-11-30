@@ -12,10 +12,10 @@ function navBar() {
 /* Make nav background change colour, and logo fade out on scroll */
 $(window).on("scroll", function() {
 	if($(window).scrollTop() > 50) {
-		$(".topnav,h1.intro,h2.intro,img.title").addClass("active"); //adds the active class to topnav and banner logo
+		$(".topnav,h1.intro,h2.intro,h3.intro,img.title").addClass("active"); //adds the active class to topnav and banner logo
 	} else {
 		//remove the background property so it becomes transparent again, defined in main.css
-		$(".topnav,h1.intro,h2.intro,img.title").removeClass("active");
+		$(".topnav,h1.intro,h2.intro,h3.intro,img.title").removeClass("active");
 	}
 });
 
@@ -94,3 +94,17 @@ function overlayHideThree() {
 function overlayHideFour() {
   document.getElementById("overlay-4").classList.remove("show");
 }
+
+//Emails
+//Split the email address into two parts and remove the @ symbol
+var firstOne = "CHeron";
+var lastOne = "britishmuseum.org";
+
+var firstTwo = "oliver.craig"
+var lastTwo = "york.ac.uk"
+
+var firstThree = "BCourel"
+var lastThree = "britishmuseum.org"
+
+var firstFour = "alexandre.lucquin"
+var lastFour = "york.ac.uk"
